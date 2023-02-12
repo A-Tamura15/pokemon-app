@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+nav {
+  background: linear-gradient(70deg, $cGreenMain, $cGreenSub);
+  color: $cWhite;
+  height: 65px;
+  font-weight: 600;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}

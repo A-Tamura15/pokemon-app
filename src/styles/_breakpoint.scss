@@ -1,0 +1,12 @@
+$breakpoints: (
+  "sp": "(max-width: 767px)",
+  "tab": "(max-width: 1199px)",
+  "pc": "(min-width: 1200px)",
+) !default;
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

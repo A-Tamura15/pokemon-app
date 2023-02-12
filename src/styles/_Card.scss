@@ -1,0 +1,94 @@
+@use "./variables" as *;
+
+.card {
+  width: 30%;
+  box-shadow: 0px 7px 20px -7px #777777;
+  border-radius: 10px;
+  background-color: $cWhite;
+
+  &:not(:nth-child(3n + 1)) {
+    margin-left: 5%;
+  }
+  &:nth-child(n + 4) {
+    margin-top: 5%;
+  }
+
+  &Name {
+    padding: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  &Info {
+    text-align: center;
+  }
+}
+
+.type {
+  padding: 5px 10px;
+  color: $cWhite;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 600;
+
+  &:nth-child(2) {
+    margin-left: 5px;
+  }
+}
+
+/* タイプカラー */
+.normal {
+  background-color: #949595;
+}
+.fire {
+  background-color: #e56c3f;
+}
+.water {
+  background-color: #5185c5;
+}
+.grass {
+  background-color: #67a945;
+}
+.electric {
+  background-color: #f7d852;
+}
+.ice {
+  background-color: #6dc7eb;
+}
+.fighting {
+  background-color: #e09c41;
+}
+.poison {
+  background-color: #745098;
+}
+.ground {
+  background-color: #9c7643;
+}
+.flying {
+  background-color: #a3c2e7;
+}
+.psychic {
+  background-color: #de6b7a;
+}
+.bug {
+  background-color: #9fa243;
+}
+.rock {
+  background-color: #bfb989;
+}
+.ghost {
+  background-color: #684870;
+}
+.dragon {
+  background-color: #535ca8;
+}
+.dark {
+  background-color: #4c4848;
+}
+.steel {
+  background-color: #69a9c6;
+}
+.fairy {
+  background-color: #dab4d4;
+}
