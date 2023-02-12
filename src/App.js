@@ -34,6 +34,8 @@ function App() {
     };
     fetchPokemonData();
   }, []);
+
+  // ポケモン情報の取得
   const loadPokemon = async (data, species_flg) => {
     let _pokemonData = await Promise.all(
       data.map((pokemon) => {
@@ -49,6 +51,7 @@ function App() {
     }
   };
 
+  // ポケモンのタイプを取得
   const typesPokemon = async (data, species_flg) => {
     let _pokemonData = await Promise.all(
       data.map((pokemon) => {
@@ -67,6 +70,7 @@ function App() {
     setPokemonTypesData(_pokemonData);
   };
 
+  // 次へボタン押下時
   const handleNextPage = async () => {
     setLoading(true);
     let data = await getAllPokemon(nextUrl);
@@ -83,6 +87,8 @@ function App() {
     setPrevVisible(true);
     window.scrollTo(0, 0);
   };
+
+  // 前へボタン押下時
   const handlePrevPage = async () => {
     setLoading(true);
     let data = await getAllPokemon(prevUrl);

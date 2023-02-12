@@ -1,16 +1,39 @@
 @use "./variables" as *;
+@use "./breakpoint" as *;
 
 .card {
-  width: 30%;
   box-shadow: 0px 7px 20px -7px #777777;
   border-radius: 10px;
   background-color: $cWhite;
 
-  &:not(:nth-child(3n + 1)) {
-    margin-left: 5%;
+  @include mq("pc") {
+    width: 30%;
+    &:not(:nth-child(3n + 1)) {
+      margin-left: 2%;
+    }
+    &:nth-child(n + 4) {
+      margin-top: 5%;
+    }
   }
-  &:nth-child(n + 4) {
-    margin-top: 5%;
+
+  @include mq("tab") {
+    width: 45%;
+    &:not(:nth-child(2n + 1)) {
+      margin-left: 2%;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 5%;
+    }
+  }
+
+  @include mq("sp") {
+    width: 94%;
+    margin-left: 0 !important;
+
+    &:not(:first-child) {
+      margin-top: 5%;
+    }
   }
 
   &Name {
